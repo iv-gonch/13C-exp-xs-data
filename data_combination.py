@@ -9,20 +9,6 @@ import os
 
 directory_path = "./histo_data/"
 
-# name = './histo_plot/!combined_histogram_all_errs_no_a_n0' 
-# title = "Гистограмма построена только" + \
-#  "\n" + "с использованием данных с ошибками" + \
-#  "\n" + "по XS и E_a," + \
-#  "\n" + r"исключая $(\alpha, n_0)$-реакции"
-# csv_file_names = ['7_Sekharan_1967', '2_Bair_1973', '6_Brandenburg_2023']
-
-# name = './histo_plot/!combined_histogram_all_errs' 
-# title = "Гистограмма построена только" + \
-#  "\n" + "с использованием данных с ошибками" + \
-#  "\n" + "по XS и E_a," + \
-#  "\n" + r"включая $(\alpha, n_0)$-реакции"
-# csv_file_names = ['10_Prusachenko_2022', '7_Sekharan_1967', '2_Bair_1973', '6_Brandenburg_2023']
-
 # name = './histo_plot/!combined_histogram_all' 
 # title = "Гистограмма построена" + \
 #  "\n" + "с использованием всех данных" 
@@ -43,6 +29,34 @@ directory_path = "./histo_data/"
 #     '6_Brandenburg_2023'    # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
 # ]
 
+# name = './histo_plot/!combined_histogram_a_n0_only' 
+# title = "Гистограмма построена" + \
+#  "\n" + "с использованием данных" + \
+#  "\n" + r"исключительно для $(\alpha, n_0)$-реакции"
+# csv_file_names = [
+#     '1_Drotleff_1993', 
+#     '3_Kellogg_1989', 
+#     '4_Febbraro_2020', 
+#     '5_Walton_1957', 
+#     '8_Davids_1968', 
+#     '10_Prusachenko_2022', 
+#     '11_Gao_2022'
+#     ]
+
+# name = './histo_plot/!combined_histogram_all_errs_no_a_n0' 
+# title = "Гистограмма построена только" + \
+#  "\n" + "с использованием данных с ошибками" + \
+#  "\n" + "по XS и E_a," + \
+#  "\n" + r"исключая $(\alpha, n_0)$-реакции"
+# csv_file_names = ['7_Sekharan_1967', '2_Bair_1973', '6_Brandenburg_2023']
+
+# name = './histo_plot/!combined_histogram_all_errs' 
+# title = "Гистограмма построена только" + \
+#  "\n" + "с использованием данных с ошибками" + \
+#  "\n" + "по XS и E_a," + \
+#  "\n" + r"включая $(\alpha, n_0)$-реакции"
+# csv_file_names = ['10_Prusachenko_2022', '7_Sekharan_1967', '2_Bair_1973', '6_Brandenburg_2023']
+
 # name = './histo_plot/!combined_histogram_dXS_errs_no_a_n0' 
 # title = "Гистограмма построена только" + \
 #  "\n" + "с использованием данных с ошибками по XS," + \
@@ -58,24 +72,24 @@ directory_path = "./histo_data/"
 #     '6_Brandenburg_2023'    # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
 # ]
 
-name = './histo_plot/!combined_histogram_no_a_no' 
-title = "Гистограмма построена" + \
- "\n" + "с использованием всех данных," + \
- "\n" + r"исключая $(\alpha, n_0)$-реакции"
-csv_file_names = [
-    '1000_JENDL',           # 'XS (b)',            'Ea (eV)'
-    '100_Mohr',             # 'XS (b)',            'Ea (eV)'
-    '5_Walton_1957',        # 'XS (b)',            'Ea (eV)'
+# name = './histo_plot/!combined_histogram_no_a_no' 
+# title = "Гистограмма построена" + \
+#  "\n" + "с использованием всех данных," + \
+#  "\n" + r"исключая $(\alpha, n_0)$-реакции"
+# csv_file_names = [
+#     '1000_JENDL',           # 'XS (b)',            'Ea (eV)'
+#     '100_Mohr',             # 'XS (b)',            'Ea (eV)'
+#     '5_Walton_1957',        # 'XS (b)',            'Ea (eV)'
 
-    '1_Drotleff_1993',      # 'XS (b)', 'dXS (b)', 'Ea (eV)'
-    '3_Kellogg_1989',       # 'XS (b)', 'dXS (b)', 'Ea (eV)'
-    '8_Davids_1968',        # 'XS (b)', 'dXS (b)', 'Ea (eV)'
-    '11_Gao_2022',          # 'XS (b)', 'dXS (b)', 'Ea (eV)'
+#     '1_Drotleff_1993',      # 'XS (b)', 'dXS (b)', 'Ea (eV)'
+#     '3_Kellogg_1989',       # 'XS (b)', 'dXS (b)', 'Ea (eV)'
+#     '8_Davids_1968',        # 'XS (b)', 'dXS (b)', 'Ea (eV)'
+#     '11_Gao_2022',          # 'XS (b)', 'dXS (b)', 'Ea (eV)'
 
-    '7_Sekharan_1967',      # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
-    '2_Bair_1973',          # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
-    '6_Brandenburg_2023'    # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
-]
+#     '7_Sekharan_1967',      # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
+#     '2_Bair_1973',          # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
+#     '6_Brandenburg_2023'    # 'XS (b)', 'dXS (b)', 'Ea (eV)', 'dEa (eV)'
+# ]
 
 
 # Создаём словарь датафреймов (ключ — имя файла)
